@@ -1,6 +1,7 @@
 import React, { useEffect, useRef} from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/all';
+import Slide2 from './Slide2';
 
 gsap.registerPlugin(ScrollTrigger)
 
@@ -52,10 +53,13 @@ const Horizontal = () => {
         <section ref={pinSectionRef} style={{ height: "100vh", overflow: "hidden", position: "relative" }}>
             <div ref={scrollContainerRef} style={{ display: "flex", height: "100%", width: "max-content"}}>
                 <div style={{ width: "100vw", background: "#FFD6A5", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <h1>Slide 1</h1>
+                    <div>
+                        <h1>Hey there!</h1>
+                        <p>Welcome to my page!</p>
+                    </div>
                 </div>
-                <div style={{ width: "100vw", background: "#FDFFB6", display: "flex", alignItems: "center", justifyContent: "center" }}>
-                    <h1>Slide 2</h1>
+                <div style={{ width: "100vw", background: "#FDFFB6", padding: "2rem", display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "start" }}>
+                    <Slide2 />
                 </div>
                 <div style={{ width: "100vw", background: "#CAFFBF", display: "flex", alignItems: "center", justifyContent: "center" }}>
                     <h1>Slide 3</h1>
